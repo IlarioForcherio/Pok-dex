@@ -1,11 +1,11 @@
 <template>
-    <div class="text-danger">
+    <div>
         <section>
             <div class="box-left">
-                left
-                <input type="text" v-model="inputTextLeftComp" @keyup.enter="$emit('emitInputTextLeftComp', inputTextLeftComp  )">
+                <input type="text" v-model="inputTextLeftComp" @keyup.enter="$emit('emitInputTextLeftComp', inputTextLeftComp  ), visualize = true ">
+                <div>{{singlePokemon.name}}</div>
+                <img v-if='visualize' :src='singlePokemon.sprites.front_shiny' alt="">
             </div>
-    
         </section>
     </div>
 </template>
@@ -14,20 +14,21 @@
 export default {
     name: 'LeftComp',
     components: {
-
+    
     },
     props: {
-
+        singlePokemon: Object,
     },
     data() {
         return {
             inputTextLeftComp: '',
+            visualize: false
         }
     },
     mounted() {
 
     },
-    methods() {
+    methods: {
 
     },
 

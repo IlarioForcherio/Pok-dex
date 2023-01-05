@@ -2,9 +2,10 @@
     <div id="app">
     
         <div class="d-flex justify-content-center">
-            <LeftComp @emitInputTextLeftComp="searchPokemon" />
-            <RightComp />
+            <LeftComp @emitInputTextLeftComp="searchPokemon" :singlePokemon="singlePokemon" />
+            <RightComp :singlePokemon="singlePokemon" />
         </div>
+    
     
     </div>
 </template>
@@ -12,7 +13,7 @@
 <script>
 import LeftComp from './components/LeftComp.vue'
 import RightComp from './components/RightComp.vue'
-//import axios from 'axios'
+import axios from 'axios'
 
 export default {
     name: 'App',
@@ -22,17 +23,42 @@ export default {
     },
     data() {
         return {
-        inputTextAppue: '',
+            inputTextAppue: '',
+            singlePokemon: {},
         }
     },
     mounted() {
-
+        this.searchPokemon()
+      
     },
     methods: {
-     searchPokemon(inputTextLeftComp){
-      this.inputTextAppue = inputTextLeftComp
-     }
-    }
+
+
+
+        searchPokemon(inputTextLeftComp) {
+           
+           this.inputTextAppue = inputTextLeftComp
+
+            if (this.inputTextAppue == " ") {
+                axios.get( " https://pokeapi.co/api/v2/pokemon/bulbasaur/?limit=151" )
+                .then((resp) => {
+                    this.singlePokemon = resp.data
+                })
+            } else {
+
+                axios.get("https://pokeapi.co/api/v2/pokemon/" + this.inputTextAppue + "/?limit=151")
+                    .then((response) => {
+
+                        this.singlePokemon = response.data
+                        //console.log(this.singlePokemon)
+                    })
+            }
+
+
+        },
+
+    },
+
 
 }
 </script>
