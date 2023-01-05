@@ -1,12 +1,12 @@
 <template>
-    <div class="text-danger" >
+    <div>
 
     </div>
 </template>
 
 <script>
     export default {
-      name:'LeftComp',
+      name:'RightComp',
       components:{
 
       },

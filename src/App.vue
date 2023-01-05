@@ -1,20 +1,24 @@
 <template>
   <div id="app">
    
-  
+  <div class="d-flex justify-content-center" >
     <LeftComp />
+    <RightComp /> 
+  </div>
+
   </div>
 </template>
 
 <script>
 
 import LeftComp from './components/LeftComp.vue'
+import RightComp from './components/RightComp.vue'
 //import axios from 'axios'
 
 export default {
   name: 'App',
   components: {
-   
+    RightComp,
     LeftComp,
   }
 }
