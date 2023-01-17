@@ -5,7 +5,7 @@
                 <input type="text" v-model="inputTextLeftComp" @keyup.enter="$emit('emitInputTextLeftComp', inputTextLeftComp, visualize = true ) ">
                 <div>{{singlePokemon.name}}</div>
                
-                <img v-if="visualize"  :src='singlePokemon.sprites.front_shiny' alt="">
+                <img v-if="visualize"  :src='pokeimgAppvue' alt="">
                 <!-- <img v-else :src='pokeimg' alt=""> -->
                 <!-- <div  v-if="visualize"  >{{descriptionArray[1].flavor_text}}</div> -->
             </div>
@@ -24,6 +24,7 @@ export default {
     },
     props: {
         singlePokemon: Object,
+        pokeimgAppvue:String,
         
     },
     data() {

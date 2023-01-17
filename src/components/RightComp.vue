@@ -1,16 +1,20 @@
 <template>
     <div>
         <section>
-            <div class="box-right">
-    
-                <div>{{singlePokemon.id}}</div>
+            <div class="box-right poke-info">
+                <div><b>Name:</b>{{singlePokemon.name}}</div>
+                <div> <b> N^</b>{{singlePokemon.id}}</div>
+                <div><b>Description:</b>{{descriptionAppvue}}</div>
+                <div v-for="elem,ind in pokeType " :key="ind"><b>Type:</b>{{elem.type.name}}</div>
+                <div> <b>Height:</b> {{singlePokemon.height * 10}} cm </div>
+                <div> <b>weight:</b> {{singlePokemon.weight / 10}} kg </div>
             </div>
         </section>
     </div>
 </template>
 
 <script>
-//import axios from 'axios'
+
 
 export default {
     name: 'RightComp',
@@ -19,7 +23,8 @@ export default {
     },
     props: {
         singlePokemon: Object,
-        
+        descriptionAppvue:String,
+        pokeType:Array,
     },
     data() {
         return {
