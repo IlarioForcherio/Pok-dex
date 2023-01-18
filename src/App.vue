@@ -67,14 +67,14 @@ export default {
                        
                        //oggetto -> singolo pokemon in base all'input utente
                         this.singlePokemon = response.data
-                       //console.log(this.singlePokemon);
+                       console.log(this.singlePokemon);
                        
                        //get types e' un aray, sara' quindi necessario ciclarlo per ottenere l'informazione del tipo
                        this.type = this.singlePokemon.types
                       
                        //variabile pokeimg contiene url dell'immagine
-                       this.pokeimg =  this.singlePokemon.sprites.front_shiny
-                       
+                       //this.pokeimg =  this.singlePokemon.sprites.front_shiny
+                       this.pokeimg =  this.singlePokemon.sprites.other.dream_world.front_default
                     })
             }
 
