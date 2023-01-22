@@ -5,7 +5,7 @@
                 <!-- circle cnt -->
                 <div class="row circle-cnt">
                     <div class="col ">
-                      <div id='blueCircle'></div>
+                        <div id='blueCircle'></div>
                     </div>
                     <div class="col d-flex">
                         <div>O</div>
@@ -20,42 +20,30 @@
                     </div>
                 </div>
                 <!-- pokeInput -->
-                <div class="row mt-5">
-                    <div class="col-7">
+                <div class="d-flex justify-content-between align-items-center mt-5">
+                    <div>
                         <input type="text" v-model="inputTextLeftComp" @keyup.enter="$emit('emitInputTextLeftComp', inputTextLeftComp, visualize = true ) ">
                     </div>
-                    <div class="col-5">
-                        <div id='cross'>
-                            <div id='topCross'></div>
-                            <div id='midCross'></div>
-                            <div id='rightCross'></div>
-                            <div id='downCross'></div>
-                            <div id='leftCross'></div>
+    
+                    <!-- pokeCross-->
+                    <div class="controls">
+                        <div class="dpad">
+                            <div class="up text-center"><font-awesome-icon icon="fa-solid fa-sort-up" /></div>
+                            <div class="right text-end"><font-awesome-icon icon="fa-solid fa-caret-right" /></div>
+                            <div class="down text-center"><font-awesome-icon icon="fa-solid fa-sort-down" /></div>
+                            <div class="left"><font-awesome-icon icon="fa-solid fa-caret-left" /> </div>
+                            <div class="middle"></div>
                         </div>
+    
                     </div>
                 </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-            </div>
+                </div>
     
         </section>
-    </div>
+    
+    
+        <!-- important -->
+        </div>
 </template>
 
 <script>
@@ -103,23 +91,23 @@ export default {
 input {
     width: 100%;
     height: 50px;
-    background-color: green;
-   // display: block;
+    background-color: green; // display: block;
 }
 
 .circle-cnt {
     height: 100px;
 }
-#blueCircle{
+
+#blueCircle {
     background-color: aqua;
-   border: 1px solid black;
-   width: 80px;
-   height: 80px;
+    border: 1px solid black;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
 }
 
 .poke-img {
-     background-color: white;
+    background-color: white;
     border: 3px solid black;
     height: 250px;
 }
@@ -128,186 +116,127 @@ input {
     max-width: 50%;
 }
 
-#cross {
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-    position: absolute;
-    bottom: 70px;
-}
 
-// div#cross {
-//     width: 90px;
-//     height: 90px;
-//      position: absolute;
-//      top: 394px;
-//      left: 230px;
-// }
-// div#topcross {
-//     width: 30px;
-//     height: 30px;
-//     background-color: #222;
-//     position: absolute;
-//     top: 0;
-//     left: 30px;
-//     box-shadow: -3px 2px #010101;
-//     -webkit-box-shadow: -3px 2px #010101;
-//     -moz-box-shadow: -3px 2px #010101;
-//     -o-box-shadow: -3px 2px #010101;
-//     border-top-left-radius: 5px;
-//     -webkit-border-top-left-radius: 5px;
-//     -moz-border-top-left-radius: 5px;
-//     -o-border-top-left-radius: 5px;
-//     border-top-right-radius: 5px;
-//     -webkit-border-top-right-radius: 5px;
-//     -moz-border-top-right-radius: 5px;
-//     -o-border-top-right-radius: 5px;
-// }
-// div#leftcross {
-//     width: 30px;
-//     height: 30px;
-//     background-color: #222;
-//     z-index: 1;
-//     position: absolute;
-//     left: 0;
-//     top: 30px;
-//     box-shadow: -3px 2px #010101;
-//     -webkit-box-shadow: -3px 2px #010101;
-//     -moz-box-shadow: -3px 2px #010101;
-//     -o-box-shadow: -3px 2px #010101;
-//     border-top-left-radius: 5px;
-//     -webkit-border-top-left-radius: 5px;
-//     -moz-border-top-left-radius: 5px;
-//     -o-border-top-left-radius: 5px;
-//     border-bottom-left-radius: 5px;
-//     -webkit-border-bottom-left-radius: 5px;
-//     -moz-border-bottom-left-radius: 5px;
-//     -o-border-bottom-left-radius: 5px;
-// }
-// div#midcross {
-//     width: 30px;
-//     height: 30px;
-//     background-color: #222;
-//     position: absolute;
-//     top: 30px;
-//     left: 30px;
-//     box-shadow: -3px 2px #010101;
-//     -webkit-box-shadow: -3px 2px #010101;
-//     -moz-box-shadow: -3px 2px #010101;
-//     -o-box-shadow: -3px 2px #010101;
-// }
-// div#rightcross {
-//     width: 30px;
-//     height: 30px;
-//     background-color: #222;
-//     position: absolute;
-//     top: 30px;
-//     right: 0;
-//     box-shadow: -3px 2px #010101;
-//     -webkit-box-shadow: -3px 2px #010101;
-//     -moz-box-shadow: -3px 2px #010101;
-//     -o-box-shadow: -3px 2px #010101;
-//     border-top-right-radius: 5px;
-//     -webkit-border-top-right-radius: 5px;
-//     -moz-border-top-right-radius: 5px;
-//     -o-border-top-right-radius: 5px;
-//     border-bottom-right-radius: 5px;
-//     -webkit-border-bottom-right-radius: 5px;
-//     -moz-border-bottom-right-radius: 5px;
-//     -o-border-bottom-right-radius: 5px;
-// }
-// div#botcross {
-//     width: 30px;
-//     height: 30px;
-//     background-color: #222;
-//     position: absolute;
-//     bottom: 0;
-//     left: 30px;
-//     box-shadow: -3px 2px #010101;
-//     -webkit-box-shadow: -3px 2px #010101;
-//     -moz-box-shadow: -3px 2px #010101;
-//     -o-box-shadow: -3px 2px #010101;
-//     border-bottom-left-radius: 5px;
-//     -webkit-border-bottom-left-radius: 5px;
-//     -moz-border-bottom-left-radius: 5px;
-//     -o-border-bottom-left-radius: 5px;
-//     border-bottom-right-radius: 5px;
-//     -webkit-border-bottom-right-radius: 5px;
-//     -moz-border-bottom-right-radius: 5px;
-//     -o-border-bottom-right-radius: 5px;
-// }
-// div#upT {
-//     width: 0;
-//     height: 0;
-//     border-left: 10px solid transparent;
-//     border-right: 10px solid transparent;
-//     border-bottom: 10px solid #111;
-//     position: absolute;
-//     top: 5px;
-//     left: 4px;
-// }
-// div#downT {
-//     width: 0;
-//     height: 0;
-//     border-left: 10px solid transparent;
-//     border-right: 10px solid transparent;
-//     border-top: 10px solid #111;
-//     position: absolute;
-//     bottom: 5px;
-//     left: 4px;
-// }
-// div#leftT {
-//     width: 0;
-//     height: 0;
-//     border-top: 10px solid transparent;
-//     border-right: 10px solid #111;
-//     border-bottom: 10px solid transparent;
-//     position: absolute;
-//     top: 5px;
-//     left: 4px;
-// }
-// div#rightT {
-//     width: 0;
-//     height: 0;
-//     border-top: 10px solid transparent;
-//     border-left: 10px solid #111;
-//     border-bottom: 10px solid transparent;
-//     position: absolute;
-//     top: 5px;
-//     right: 5px;
-// }
-// div#midCircle {
-//     width: 20px;
-//     height: 20px;
-//     position: absolute;
-//     top: 5px;
-//     left: 4px;
-//     border-radius: 30px;
-//     -webkit-border-radius: 30px;
-//     -moz-border-radius: 30px;
-//     -o-border-radius: 30px;
-//     background: radial-gradient(#111, #222);
-//     background: -webkit-radial-gradient(#111, #222);
-//     background: -moz-radial-gradient(#111, #222);
-//     background: -o-radial-gradient(#111, #222);
-// }
-//HTML
-//    <!-- Cross -->
-//     <div id="cross">
-//         <div id="leftcross">
-//             <div id="leftT"></div>
-//         </div>
-//         <div id="topcross">
-//             <div id="upT"></div>
-//         </div>
-//         <div id="rightcross">
-//             <div id="rightT"></div>
-//         </div>
-//         <div id="midcross">
-//             <div id="midCircle"></div>
-//         </div>
-//         <div id="botcross">
-//             <div id="downT"></div>
-//         </div>
-//     </div>
+
+
+
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    .dpad {
+        position: relative;
+        display: inline-block;
+        width: 90px;
+        height: 90px;
+        z-index: 5;
+        >* {
+            width: 33%;
+            height: 33%;
+            position: absolute;
+            background-color: #565e6a;
+            cursor: pointer;
+            i {
+                position: relative;
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+                height: 100%;
+                font-size: 28px;
+                color: #333a4a;
+                text-shadow: 0px -0.5px 0px #aaa;
+            }
+        }
+        .up {
+            top: calc(0% + 4px);
+            left: 33%;
+            border-top: 4px solid black;
+            border-left: 4px solid black;
+            border-right: 4px solid black;
+            border-radius: 5px 5px 0px 0px;
+            &:active {
+                background: linear-gradient(to top, #565e6a 0%, #333 100%);
+            }
+            i {
+                top: -5px;
+            }
+        }
+        .right {
+            text-align: right;
+            padding-left: 0px;
+            top: 33%;
+            left: calc(66% - 4px);
+            border-top: 4px solid black;
+            border-bottom: 4px solid black;
+            border-right: 4px solid black;
+            border-radius: 0px 5px 5px 0px;
+            box-shadow: 0px -2px 0px #888 inset;
+            &:active {
+                background: linear-gradient(to right, #565e6a 0%, #333 100%);
+            }
+            .fa-caret-right {
+                padding-left:15px;
+                top: -5px;
+            }
+        }
+        .down {
+            top: calc(66% - 4px);
+            left: 33%;
+            border-left: 4px solid black;
+            border-bottom: 4px solid black;
+            border-right: 4px solid black;
+            border-radius: 0px 0px 5px 5px;
+            box-shadow: 0px -2px 0px #888 inset;
+            &:active {
+                background: linear-gradient(to bottom, #565e6a 0%, #333 100%);
+            }
+        }
+        .left {
+            top: 33%;
+            left: calc(0% + 4px);
+            border-top: 4px solid black;
+            border-bottom: 4px solid black;
+            border-left: 4px solid black;
+            border-radius: 5px 0px 0px 5px;
+            box-shadow: 0px -2px 0px #888 inset;
+            i {
+                top: -5px;
+            }
+            &:active {
+                background: linear-gradient(to left, #565e6a 0%, #333 100%);
+            }
+        }
+        .middle {
+            top: 33%;
+            left: 33%;
+            z-index: -5;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 20%;
+                left: 20%;
+                display: inline-block;
+                border: 1px solid #6e737a;
+                background: linear-gradient(to bottom, #6d7075 0%, #6d7075 30%, #23272f 70%, #23272f 100%);
+                border-radius: 50%;
+                height: 60%;
+                width: 60%;
+            }
+        }
+        .up-down {
+            background-color: #565e6a;
+            border: 4px solid black;
+            border-radius: 5px;
+            width: 20px;
+            height: 60px;
+        }
+        .left-right {
+            background-color: #565e6a;
+            border: 4px solid black;
+            border-radius: 5px;
+            width: 60px;
+            height: 20px;
+        }
+    }
+}
 </style>
