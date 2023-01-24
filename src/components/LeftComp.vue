@@ -14,7 +14,7 @@
                     </div>
                 </div>
                 <!-- Pokeimg -->
-                <div class="row justify-content-center align-items-center g-2 poke-img">
+                <div class="row justify-content-center align-items-center g-2 poke-img text-center">
                     <div class="col">
                         <img v-if="visualize" :src='pokeimgAppvue' alt="">
                     </div>
@@ -81,17 +81,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 .box-left {
-    background-color: rgb(168, 3, 3);
+    
+    background-color:#f90c65;
     height: 500px;
     width: 300px;
     border: 1px solid black;
 }
 
 input {
+
     width: 100%;
     height: 50px;
-    background-color: green; // display: block;
+    background-color:#39b47d; // display: block;
+    border-radius: 10px;
+    border: 3px solid black;
 }
 
 .circle-cnt {

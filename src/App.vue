@@ -107,7 +107,9 @@ export default {
 
 <style lang="scss">
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-family: 'Press Start 2P',cursive;
+    
+   //font-family: 'VT323', monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     
