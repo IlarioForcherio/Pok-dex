@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <!-- gSlots -->
-                <div class="mt-5 d-flex justify-content-between" >
+                <div class="mt-4 d-flex justify-content-between" >
                     <div class="text-center gSlot"><b>Height:</b> {{singlePokemon.height * 10}} cm </div>
                     <div class="gSlot"><b>Weight:</b> {{singlePokemon.weight / 10}} kg </div>
                 </div>
@@ -95,19 +95,18 @@ li{
 .box-right {
     font-size: 0.75rem;
     background-color: #f90c65;
-    height: 500px;
     width: 300px;
-    border: 1px solid black;
+    height: 500px;
+    border: 3px solid black;
 }
 
 .poke-info {
     height: 220px;
-   
-    background-color: white;
+    background-color: rgb(158, 157, 157);
     border: 1px solid black;
 }
 
-.gGrid {}
+//.gGrid {}
 
 .bSquare {
     background-color: #7ba9f9;
@@ -124,7 +123,7 @@ li{
 
 .rButton {
     background-color: red;
-    border: 2px solid black;
+    border: 3px solid black;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -139,7 +138,7 @@ li{
 
 .yButton {
     background-color: yellow;
-    border: 2px solid black;
+    border: 3px solid black;
     width: 50px;
     height: 50px;
     border-radius: 50%;

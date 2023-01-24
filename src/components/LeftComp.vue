@@ -4,13 +4,14 @@
             <div class="box-left container">
                 <!-- circle cnt -->
                 <div class="row circle-cnt">
-                    <div class="col ">
+                    <div class="col-4 mt-2">
                         <div id='blueCircle'></div>
                     </div>
-                    <div class="col d-flex">
-                        <div>O</div>
-                        <div>O</div>
-                        <div>O</div>
+                    <!-- topCircles -->
+                    <div class="col-6 d-flex mt-3">
+                        <div class="rCircle" ></div>
+                        <div class="yCircle"></div>
+                        <div class="gCircle"></div>
                     </div>
                 </div>
                 <!-- Pokeimg -->
@@ -82,15 +83,29 @@ export default {
 
 <style lang="scss" scoped>
 
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-//@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 .box-left {
     
     background-color:#f90c65;
-    height: 500px;
+    height:500px;
     width: 300px;
-    border: 1px solid black;
+    border: 3px solid black;
+}
+.rCircle,.yCircle,.gCircle{
+height: 20px;
+width: 20px;
+border: 3px solid black;
+border-radius: 50%;
+margin-right: 5px;
+}
+.rCircle{
+    background-color: red;
+}
+.yCircle{
+    background-color: yellow;
+}
+.gCircle{
+    background-color: green;
 }
 
 input {
@@ -108,14 +123,15 @@ input {
 
 #blueCircle {
     background-color: aqua;
-    border: 1px solid black;
+    border: 4px solid black;
     width: 80px;
     height: 80px;
     border-radius: 50%;
 }
 
 .poke-img {
-    background-color: white;
+    background-color: #99cb98;
+    
     border: 3px solid black;
     height: 250px;
 }
