@@ -1,17 +1,25 @@
 <template>
     <div id="app">
-        <div class="text-center" >
-            <img class="pKmLogo"  src="./assets/img/105195232-72462e00-5b08-11eb-9bd0-dfa95f8e7e9a.png" alt="">
-            <div class="d-flex justify-content-center align-items-center">
-                <LeftComp @emitInputTextLeftComp="searchPokemon"
-                 :singlePokemon="singlePokemon"
-                 :pokeimgAppvue='pokeimg' />
-                <RightComp :singlePokemon="singlePokemon" 
-                :descriptionAppvue="description" 
-                :pokeType='type' />
-            </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="text-center">
+                        <img class="pKmLogo" src="./assets/img/105195232-72462e00-5b08-11eb-9bd0-dfa95f8e7e9a.png" alt="">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <LeftComp @emitInputTextLeftComp="searchPokemon" :singlePokemon="singlePokemon" :pokeimgAppvue='pokeimg' />
+                            <RightComp :singlePokemon="singlePokemon" :descriptionAppvue="description" :pokeType='type' />
+                        </div>
+                    </div>
     
+                </div>
+            </div>
         </div>
+    
+    
+    
+    
+    
+    
     </div>
 </template>
 
@@ -111,6 +119,7 @@ export default {
 //@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 #app {
     //height: 100vh;
+    padding-bottom: 100px;
     background-image: url('./assets/img/deoyux1-d72ca079-9b11-490c-a194-108bb8dda821.jpeg');
     background-position: center;
     background-repeat: no-repeat;
@@ -120,11 +129,10 @@ export default {
     //-moz-osx-font-smoothing: grayscale;
     // color: #2c3e50;
 }
-.pKmLogo{
+
+.pKmLogo {
     width: 30%;
     position: relative;
-
-
 }
 
 * {

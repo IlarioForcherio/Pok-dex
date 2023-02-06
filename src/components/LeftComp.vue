@@ -5,45 +5,88 @@
                 <!-- circle cnt -->
                 <div class="row circle-cnt">
                     <div class="col-4 mt-2">
-                        <div id='blueCircle'></div>
+                        <div class="d-flex justify-content-center align-items-center" id="wBorder">
+                            <div id='blueCircle'>
+                                <div class="reflex"></div>
+                            </div>
+                        </div>
                     </div>
                     <!-- topCircles -->
                     <div class="col-6 d-flex mt-3">
-                        <div class="rCircle"></div>
-                        <div class="yCircle"></div>
-                        <div class="gCircle"></div>
+                        <div class="rCircle">
+                            <div class="reflex"></div>
+                        </div>
+                        <div class="yCircle">
+                            <div class="reflex"></div>
+                        </div>
+                        <div class="gCircle">
+                            <div class="reflex"></div>
+                        </div>
                     </div>
                 </div>
                 <!-- Pokeimg -->
-                <div class="row justify-content-center align-items-center g-2 poke-img text-center">
+    
+                <div class="row">
                     <div class="col">
-                        <img v-if="visualize" :src='pokeimgAppvue' alt="">
+                        <div class="d-flex flex-column justify-content-center align-items-center poke-img-cnt">
+                            <div class="d-flex p-2">
+                                <div>
+                                    <div class="tiny-rCircle">
+                                        <div class="reflex"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="tiny-rCircle">
+                                        <div class="reflex"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center g-2 poke-img text-center">
+                                <img v-if="visualize" :src='pokeimgAppvue' alt="">
+                            </div>
+                            <div class="p-1 d-flex ">
+                                <div>
+                                    <div v-for="n in 4" :key="n" class="audio-strings m-1"></div>
+                                </div>
+                            </div>
+    
+    
+                        </div>
+    
                     </div>
                 </div>
+    
+    
                 <!-- pokeInput -->
                 <div class="d-flex justify-content-between align-items-center mt-5">
                     <div>
                         <input type="text" v-model="inputTextLeftComp" @keyup.enter="$emit('emitInputTextLeftComp', inputTextLeftComp, visualize = true ) ">
                     </div>
     
-                     
+    
                     <div class="cross">
-                        <div class="up d-flex">
-                            <div class="prova">
+                        <div class="up">
+                            <div>
                                 <font-awesome-icon icon="fa-solid fa-sort-up" />
                             </div>
                         </div>
-                        
+    
                         <div class="d-flex justify-content-between">
-                            <div class="left"><font-awesome-icon icon="fa-solid fa-caret-left" /></div>
-                          
-                              <div class="center d-flex justify-content-center align-items-center">
-                                <div class="ccircle" ></div>
-                                </div>   
-                        
-                            <div class="right"><font-awesome-icon icon="fa-solid fa-caret-right" /></div>
+                            <div class="left">
+                                <font-awesome-icon icon="fa-solid fa-caret-left" />
+                            </div>
+    
+                            <div class="center d-flex justify-content-center align-items-center">
+                                <div class="ccircle"></div>
+                            </div>
+    
+                            <div class="right">
+                                <font-awesome-icon icon="fa-solid fa-caret-right" />
+                            </div>
                         </div>
-                        <div class="down"><font-awesome-icon icon="fa-solid fa-sort-down" /></div>
+                        <div class="down">
+                            <font-awesome-icon icon="fa-solid fa-sort-down" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -95,7 +138,7 @@ export default {
     height: 500px;
     width: 300px;
     border: 3px solid black;
-    padding-bottom:50px
+    padding-bottom: 50px
 }
 
 .rCircle,
@@ -113,7 +156,7 @@ export default {
 }
 
 .yCircle {
-    background-color: yellow;
+    background-color: rgba(255, 255, 0, 0.8);
 }
 
 .gCircle {
@@ -121,7 +164,7 @@ export default {
 }
 
 input {
-    width: 40%;
+    width: 100%;
     height: 50px;
     background-color: #39b47d; // display: block;
     border-radius: 10px;
@@ -132,49 +175,88 @@ input {
     height: 100px;
 }
 
-#blueCircle {
-    background-color: aqua;
-    border: 4px solid black;
+.reflex {
+    position: relative;
+    top: 15%;
+    left: 15%;
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#wBorder {
+    background-color: white;
     width: 80px;
     height: 80px;
     border-radius: 50%;
+    border: 3px solid black;
+}
+
+#blueCircle {
+    position: absolute;
+    background-color: aqua;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+//pokeimg
+.poke-img-cnt {
+    background-color: #f4f7f4;
+    border: 3px solid black;
+    height: 250px;
+    width: 100%;
 }
 
 .poke-img {
     background-color: #99cb98;
     border: 3px solid black;
-    height: 250px;
+    height: 90%;
+    width: 90%;
 }
 
 .poke-img img {
     max-width: 50%;
 }
 
+.tiny-rCircle {
+    height: 10px;
+    width: 10px;
+    border: 3px solid black;
+    border-radius: 50%;
+    margin-right: 5px;
+    background-color: red;
+}
+
+.audio-strings {
+    width: 40px;
+    border: 2px solid black;
+}
+
+//cross
 .cross {
     position: relative;
     width: 100px;
     height: 100px;
-    aspect-ratio: 1/1;
-   //border: 2px solid black;
+    aspect-ratio: 1/1; //border: 2px solid black;
 }
 
 .up {
     background-color: rgb(67, 66, 66);
     position: absolute;
     left: 34px;
-    top: 6px;
+    top: 7px;
     border: 4px solid black;
     border-bottom: 0px;
     padding-bottom: 1px;
     padding-left: 7px;
-     padding-right: 7px;
-     
-     :active{
-        box-shadow:0px 5px 10px black;   
-      }
-     
+    padding-right: 7px;
+    :active {
+        box-shadow: 0px 5px 10px black;
+    }
 }
-
 
 .left {
     background-color: rgb(67, 66, 66);
@@ -185,13 +267,11 @@ input {
     border-right: 0px;
     padding-right: 10px;
     padding-left: 5px;
-    box-shadow: 0px -2px 0px #888 inset; 
-    :active{
-
-        box-shadow:0px 0px 10px black;   
-      }
+    box-shadow: 0px -2px 0px #888 inset;
+    :active {
+        box-shadow: 0px 0px 10px black;
+    }
 }
-
 
 .center {
     background-color: rgb(67, 66, 66);
@@ -199,20 +279,18 @@ input {
     top: 35px;
     left: 35px;
     width: 28px;
-    height: 28px;
-   // border-radius: 50%;
+    height: 28px; // border-radius: 50%;
     //border: 2px solid black;
     //border-bottom: 0px;
 }
-.ccircle{
+
+.ccircle {
     border: 2px solid black;
     width: 22px;
     height: 22px;
     border-radius: 50%;
     background: linear-gradient(to bottom, #6d7075 0%, #6d7075 30%, #23272f 70%, #23272f 100%);
 }
-     
-
 
 .right {
     background-color: rgb(67, 66, 66);
@@ -221,31 +299,27 @@ input {
     top: 33px;
     border: 4px solid black;
     border-left: 0px;
-    padding-left:12px;
+    padding-left: 12px;
     padding-right: 4px;
-    box-shadow: 0px -2px 0px #888 inset;      
-    :active{
-        box-shadow:0px 0px 10px black;   
-      }
-    
+    box-shadow: 0px -2px 0px #888 inset;
+    :active {
+        box-shadow: 0px 0px 10px black;
+    }
 }
 
 .down {
     background-color: rgb(67, 66, 66);
     position: absolute;
     bottom: 10px;
-    left:35px ;
+    left: 35px;
     border: 4px solid black;
     border-top: 0px;
-    padding-top:2px ;
+    padding-top: 2px;
     padding-left: 7px;
     padding-right: 7px;
     box-shadow: 0px -2px 0px #888 inset;
-      :active{
-        box-shadow:0px 0px 10px black;   
-      }
-    
+    :active {
+        box-shadow: 0px 0px 10px black;
+    }
 }
-
-
 </style>

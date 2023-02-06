@@ -15,7 +15,7 @@
                         </ul>
                     </div>
                 </div>
-                <!-- greenGrid -->
+                <!-- blueGrid -->
                 <div class="w-75 m-auto bGrid mt-4 d-flex flex-wrap justify-content-center">
                     <div v-for="n in 12" :key="n" class="bSquare"></div>
                 </div>
@@ -30,8 +30,12 @@
                     <!-- rButton -->
                     <div>
                         <div class=" mt-2 d-flex ">
-                            <div class="ms-2 rButton"></div>
-                            <div class="rButton"></div>
+                            <div class="ms-2 rButton">
+                                <div class="reflex"></div>
+                            </div>
+                            <div class="rButton">
+                                <div class="reflex"></div>
+                            </div>
                         </div>
                         <!-- wSquares -->
                         <div class="d-flex" >
@@ -41,7 +45,9 @@
                     </div>
                     <!-- yButton -->
                     <div class="mt-3">
-                        <div class="yButton"></div>
+                        <div class="yButton">
+                            <div class="reflex"></div>
+                        </div>
                     </div>
                 </div>
                 <!-- gSlots -->
@@ -110,6 +116,7 @@ li{
     width: calc(100% / 6);
     height: 30px;
     border: 1px solid black;
+   box-shadow: -5px -6px 10px rgb(68, 68, 68) inset; 
 }
 
 .bButton {
@@ -131,14 +138,25 @@ li{
     border: 1px solid black;
     width: 40px;
     height: 40px;
+    box-shadow: -5px -6px 12px rgb(89, 89, 89) inset; 
 }
 
 .yButton {
-    background-color: yellow;
+    background-color:rgba(255, 255, 0, 0.8);
     border: 3px solid black;
     width: 50px;
     height: 50px;
     border-radius: 50%;
+}
+
+.reflex{
+    position:relative;
+    top:15%;
+    left:15%;
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    background-color: white;
 }
 .gSlot{
     background-color: rgb(158, 157, 157);
