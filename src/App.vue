@@ -12,8 +12,6 @@
             </div>
     
         </div>
-    
-    
     </div>
 </template>
 
@@ -112,7 +110,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 //@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 #app {
-    height: 100vh;
+    //height: 100vh;
     background-image: url('./assets/img/deoyux1-d72ca079-9b11-490c-a194-108bb8dda821.jpeg');
     background-position: center;
     background-repeat: no-repeat;
@@ -123,7 +121,9 @@ export default {
     // color: #2c3e50;
 }
 .pKmLogo{
-    width: 16%;
+    width: 30%;
+    position: relative;
+
 
 }
 

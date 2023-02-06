@@ -49,13 +49,10 @@
                     <div class="text-center gSlot"><b>Height:</b> {{singlePokemon.height * 10}} cm </div>
                     <div class="gSlot"><b>Weight:</b> {{singlePokemon.weight / 10}} kg </div>
                 </div>
-    
-    
-    
-    
             </div>
         </section>
     </div>
+    
 </template>
 
 <script>
@@ -149,4 +146,6 @@ li{
     width: 100px;
     height: 40px;
 }
+
+
 </style>
