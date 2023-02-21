@@ -2,7 +2,7 @@
     <div id="app">
         <div class="container-fluid">
             <div class="row">
-                <div class="col">
+                <div class="col-sm-12">
                     <div class="text-center">
                         <img class="pKmLogo" src="./assets/img/105195232-72462e00-5b08-11eb-9bd0-dfa95f8e7e9a.png" alt="">
                         <div class="d-flex justify-content-center align-items-center">
@@ -14,11 +14,6 @@
                 </div>
             </div>
         </div>
-    
-    
-    
-    
-    
     
     </div>
 </template>
