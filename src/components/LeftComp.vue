@@ -171,6 +171,7 @@ button{
     background-color:rgba(255, 255, 0, 0.8);
     padding: 10px;
     border-radius: 10px;
+    box-shadow: 0px -2px 0px #f8ed86 inset;
 }
 
 input {
