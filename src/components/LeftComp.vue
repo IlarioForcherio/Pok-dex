@@ -132,7 +132,11 @@ export default {
 }
 </script>
 
+
 <style lang="scss" scoped>
+section{
+    font-family: 'Press Start 2P', cursive; 
+}
 .box-left {
     background-color: #f90c65;
     height: 500px;

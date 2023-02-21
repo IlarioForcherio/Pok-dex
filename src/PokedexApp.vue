@@ -124,7 +124,7 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: 'Press Start 2P', cursive; //font-family: 'VT323', monospace;
+     //font-family: 'VT323', monospace;
     //-webkit-font-smoothing: antialiased;
     //-moz-osx-font-smoothing: grayscale;
     // color: #2c3e50;

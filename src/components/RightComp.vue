@@ -92,6 +92,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+section{
+    font-family: 'Press Start 2P', cursive; 
+}
 li{
     list-style-type:none;
 }
