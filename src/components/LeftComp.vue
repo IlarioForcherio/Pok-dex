@@ -56,7 +56,7 @@
                     </div>
                 </div>
     
-    <button  @tap="$emit('emitInputTextLeftComp', inputTextLeftComp, visualize = true )"  class="mt-3">GO!</button>
+    <button  v-touch:tap="$emit('emitInputTextLeftComp', inputTextLeftComp, visualize = true )"  class="mt-3">GO!</button>
                 <!-- pokeInput -->
                 <div class="d-flex justify-content-between align-items-center mt-2">
                     <div>

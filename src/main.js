@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import App from './PokedexApp.vue'
 
+import Vue2TouchEvents from 'vue2-touch-events'
+Vue.use(Vue2TouchEvents)
+
 //bootstrap 
 
 // import '/Users/ilarioforcherio/Desktop/BOOLEAN/esercizi/Vue-Cli/pok-dex/node_modules/bootstrap/dist/css/bootstrap.rtl.min.css'
