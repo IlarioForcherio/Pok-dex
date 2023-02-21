@@ -6,8 +6,8 @@
                     <div class="text-center">
                         <img class="pKmLogo" src="./assets/img/105195232-72462e00-5b08-11eb-9bd0-dfa95f8e7e9a.png" alt="">
                         <div class="d-flex justify-content-center align-items-center">
-                                 <audio ref="audio" v-once autoplay>
-                                    <source src="./assets/music/X2Download.app - Pokemon Blue_Red - Bicycle Theme (128 kbps).mp3" type="audio/mp3">
+                                 <audio ref="audio"  autoplay>
+                                    <source src="./assets/music/X2Download.app - Pokemon Blue_Red - Pokemon Center (128 kbps).mp3" type="audio/mp3">
                                 </audio>
                             <LeftComp @emitInputTextLeftComp="searchPokemon" :singlePokemon="singlePokemon" :pokeimgAppvue='pokeimg' />
                             <RightComp :singlePokemon="singlePokemon" :descriptionAppvue="description" :pokeType='type' />
