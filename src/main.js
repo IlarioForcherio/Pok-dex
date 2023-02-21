@@ -3,8 +3,8 @@ import App from './PokedexApp.vue'
 
 //bootstrap 
 
-import '/Users/ilarioforcherio/Desktop/BOOLEAN/esercizi/Vue-Cli/pok-dex/node_modules/bootstrap/dist/css/bootstrap.rtl.min.css'
-import '/Users/ilarioforcherio/Desktop/BOOLEAN/esercizi/Vue-Cli/pok-dex/node_modules/bootstrap/dist/js/bootstrap.min.js'
+// import '/Users/ilarioforcherio/Desktop/BOOLEAN/esercizi/Vue-Cli/pok-dex/node_modules/bootstrap/dist/css/bootstrap.rtl.min.css'
+// import '/Users/ilarioforcherio/Desktop/BOOLEAN/esercizi/Vue-Cli/pok-dex/node_modules/bootstrap/dist/js/bootstrap.min.js'
 
 //font-awsome
 
