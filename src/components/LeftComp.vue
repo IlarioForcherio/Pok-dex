@@ -61,7 +61,7 @@
                 <!-- pokeInput -->
                 <div class="d-flex justify-content-between align-items-center mt-2">
                     <div>
-                        <input type="text" v-model="inputTextLeftComp" @keyup.enter="$emit('emitInputTextLeftComp', inputTextLeftComp, visualize = true ) ">
+                        <input type="text" v-model="inputTextLeftComp" @keyup="$emit('emitInputTextLeftComp', inputTextLeftComp, visualize = true ) ">
                     </div>
     
     
