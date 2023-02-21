@@ -57,11 +57,11 @@
                 </div>
     
     <!-- <button  v-touch:tap="$emit('emitInputTextLeftComp', inputTextLeftComp, visualize = true )"  class="mt-3">GO!</button> -->
-    <button v-touch:tap.prevent="handleTap" class="mt-3">GO!</button>
+    <button v-touch:tap="handleTap" class="mt-3">GO!</button>
                 <!-- pokeInput -->
                 <div class="d-flex justify-content-between align-items-center mt-2">
                     <div>
-                        <input type="text" v-model="inputTextLeftComp" @keyup="$emit('emitInputTextLeftComp', inputTextLeftComp, visualize = true ) ">
+                        <input type="text" v-model="inputTextLeftComp" @keyup.enter="$emit('emitInputTextLeftComp', inputTextLeftComp, visualize = true ) ">
                     </div>
     
     
