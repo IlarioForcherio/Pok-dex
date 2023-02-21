@@ -170,6 +170,7 @@ button{
     border: 3px solid black;
     background-color:rgba(255, 255, 0, 0.8);
     padding: 10px;
+    border-radius: 10px;
 }
 
 input {
