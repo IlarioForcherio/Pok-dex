@@ -261,7 +261,7 @@ input {
 .left {
     background-color: rgb(67, 66, 66);
     position: absolute;
-    left: 8px;
+    left: 10px;
     top: 33px;
     border: 4px solid black;
     border-right: 0px;
