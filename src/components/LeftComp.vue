@@ -56,9 +56,9 @@
                     </div>
                 </div>
     
-    
+    <button @click="$emit('emitInputTextLeftComp', inputTextLeftComp, visualize = true )"  class="mt-3">GO!</button>
                 <!-- pokeInput -->
-                <div class="d-flex justify-content-between align-items-center mt-5">
+                <div class="d-flex justify-content-between align-items-center mt-2">
                     <div>
                         <input type="text" v-model="inputTextLeftComp" @keyup.enter="$emit('emitInputTextLeftComp', inputTextLeftComp, visualize = true ) ">
                     </div>
@@ -139,7 +139,7 @@ section{
 }
 .box-left {
     background-color: #f90c65;
-    height: 500px;
+    height: 530px;
     width: 300px;
     border: 3px solid black;
     padding-bottom: 50px
@@ -165,6 +165,11 @@ section{
 
 .gCircle {
     background-color: green;
+}
+button{
+    border: 3px solid black;
+    background-color:rgba(255, 255, 0, 0.8);
+    padding: 10px;
 }
 
 input {
@@ -241,6 +246,7 @@ input {
 
 //cross
 .cross {
+    
     position: relative;
     width: 100px;
     height: 100px;
@@ -292,6 +298,8 @@ input {
     border: 2px solid black;
     width: 22px;
     height: 22px;
+    margin-left:2px;
+    margin-bottom:3px;
     border-radius: 50%;
     background: linear-gradient(to bottom, #6d7075 0%, #6d7075 30%, #23272f 70%, #23272f 100%);
 }

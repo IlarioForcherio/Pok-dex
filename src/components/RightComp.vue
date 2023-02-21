@@ -10,8 +10,7 @@
                             <li><b> N^</b>{{singlePokemon.id}}</li>
                             <li>{{descriptionAppvue}}</li>
                             <li v-for="elem,ind in pokeType " :key="ind"><b>Type:</b>{{elem.type.name}}</li>
-                            <!-- <li><b>Height:</b> {{singlePokemon.height * 10}} cm </li>
-                            <li><b>Weight:</b> {{singlePokemon.weight / 10}} kg </li> -->
+                         
                         </ul>
                     </div>
                 </div>
@@ -22,7 +21,7 @@
                 <!-- buttons -->
                 <!-- bButton -->
                 <div class="w-75 m-auto mt-2 d-flex justify-content-end">
-                    <div class="ms-2 bButton"></div>
+                    <div class="me-4 bButton"></div>
                     <div class="bButton"></div>
                 </div>
     
@@ -102,7 +101,7 @@ li{
     font-size: 0.75rem;
     background-color: #f90c65;
     width: 300px;
-    height: 500px;
+    height: 530px;
     border: 3px solid black;
 }
 
@@ -126,6 +125,7 @@ li{
     background-color: black;
     width: 40px;
     height: 8px;
+    //margin: 5px;
 }
 
 .rButton {
