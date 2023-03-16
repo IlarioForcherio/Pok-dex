@@ -46,6 +46,7 @@ export default {
             pokeimg: '',
 
             type: [],
+            ciao:'',
         }
     },
     mounted() {
